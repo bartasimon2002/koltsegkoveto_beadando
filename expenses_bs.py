@@ -40,7 +40,7 @@ def load_expenses_from_csv_bs(filename):
                 continue
             date, category, amount_text, description = row
             try:
-                amount = float(amount_text)
+                amount = int(float(amount_text))
             except ValueError:
                 continue
             expense = ExpenseBS(date, category, amount, description)
